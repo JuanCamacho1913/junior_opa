@@ -19,14 +19,14 @@
 
 
  function NumerosPerfectosRango(numero) {
-   for(let i = 1;i <= numero; i++){ // i es el número que vamos a comprobar
+   for(let i = 1;i <= numero; i++){ 
      if (EsPerfecto(i))
-       console.info(i);
+      alert(i);
    }
  }
 
  console.clear();
- NumerosPerfectosRango(1000000);
+ NumerosPerfectosRango(numero = parseInt(prompt('Introduce un numero')));
 
 
 
