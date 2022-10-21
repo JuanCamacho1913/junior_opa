@@ -1,0 +1,40 @@
+body{
+    background-color: hsl(188, 76%, 40%);
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 1.3rem;
+    overflow: hidden;
+    
+}
+
+.title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+}
+
+.box{
+    width: 700px;
+    height: 700px;
+}
+
+.h1{
+    background-color:  rgb(36, 173, 195,);
+    position: absolute;
+    bottom: 400px;
+    right: 1000px;
+    box-shadow: 35px 35px 50px 100px hsl(188, 82%, 44%);
+    border-radius: 350px;
+    opacity: 0.3;
+    
+}
+
+.h2{
+    background-color: rgb(36, 173, 195,);
+    position: absolute;
+    top: 400px;
+    left: 1000px;
+    box-shadow: -35px -35px 50px 100px hsl(188, 82%, 44%);
+    border-radius: 350px;
+    opacity: 0.3;
+}

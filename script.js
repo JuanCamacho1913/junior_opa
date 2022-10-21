@@ -18,15 +18,31 @@
  }
 
 
- function NumerosPerfectosRango(numero) {
-   for(let i = 1;i <= numero; i++){ 
-     if (EsPerfecto(i))
-      alert(i);
+ function NumerosPerfectosRango(rango) {
+   for(let i = 1;i <= rango; i++){ 
+     if (EsPerfecto(i)){
+      document.write("<br/>")
+      document.write(i + ' Es número natural perfecto ')
+      document.write("<br/>")
+     }
    }
  }
 
- console.clear();
- NumerosPerfectosRango(numero = parseInt(prompt('Introduce un numero')));
+ NumerosPerfectosRango(rango = parseInt(prompt('Introduce un número para saber en ese rango números perfectos existentes ')));
 
+ 
+ lista = [{
+  text: 'Números naturales perfectos',
+  
+}];
 
+localStorage.setItem('list', JSON.stringify(lista));
+lista = JSON.parse(localStorage.getItem('list'));
+lista.forEach(element => {
+  let elements = document.getElementById('elements');
+  let div = document.createElement('div');
+  elements.appendChild(div);
+  div.innerHTML = element.text + ': '
+});
+ 
 
