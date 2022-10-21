@@ -12,23 +12,23 @@ function EsPerfecto(n) {
   else return false;
 }
 
-function NumerosPerfectosRango(rango) {
+function NumerosPerfectosRango() {
+  let lista = document.getElementById('output')
+  while (lista.firstChild) {
+    lista.removeChild(lista.lastChild);
+  }
+  let rango = document.getElementById("input01").value;
+  console.log(rango);
   for (let i = 1; i <= rango; i++) {
     if (EsPerfecto(i)) {
       let createElement = document.createElement("div");
       createElement.innerHTML = i + " es número natural perfecto";
-      document.body.appendChild(createElement);
+      lista.appendChild(createElement);
+      
     }
   }
+  document.body.appendChild(lista)
 }
-
-NumerosPerfectosRango(
-  (rango = parseInt(
-    prompt(
-      "Introduce un número para saber en ese rango números perfectos existentes "
-    )
-  ))
-);
 
 lista = [
   {
